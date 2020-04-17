@@ -9,16 +9,24 @@ body{
 body>section{
   display: flex;
   justify-content: space-between;
-  height: 10.5vh;
+  height: 6.35em; 
   align-items: center;
 }
+section>h1{
+  margin-left:14.2vw;
+  font-size: 1.3em;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #55555A;
+}
 nav{
+  margin-right: 12.9vw;
   width: 25%;
   display: flex;
   justify-content: space-around;
-  margin-right: 13.3vw;
 }
 nav>a{
+  margin-right: 1em;
   text-decoration: none;
   font-size: 1.1em;
   color: #55555A; 
@@ -27,53 +35,44 @@ nav>a{
 nav>a:hover{
   color: #BFBA9C;
 }
-section>h1{
-  margin-left:14.2vw;
-  color: #55555A;
-  text-transform: uppercase;
-  font-size: 1.3em;
-  letter-spacing: 0.24em;
-}
 header{
-  overflow: hidden;
-  height: 49.7vw;
   margin-bottom: 13.8vh;
+  height: 98.5vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover; 
 }
 header>div{
   position: absolute;
   top:10.5vh;
   left: 0;
-  height: 49.7vw;
+  max-height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7)
 }
 h2{
+  margin-top:20.25%;
   color:#fff;
-  margin-top:20.3%;
   font-size: 4vw;
-  font-weight: 900;
-  letter-spacing: -.025em;
+  font-weight: 700;
+  letter-spacing: -.02em;
 }
 h3{
-  margin: 18px;
+  margin-top:1.1%;
   color: #BFA929;
   font-weight: 400;
-  font-size: 1em;
-  letter-spacing: 0.1em;
-} 
-header>img{
-  width: 100vw;
+  font-size: 0.9em;
+  letter-spacing: 0.16em;
 } 
 button{
   outline: none;
   border: none;
-  margin-top: 42px;
-  border-radius: 30px;
   color: #55555A; 
+  border-radius: 30px;
   background-color: #fff;
   cursor: pointer;
   font-weight: 700;
@@ -82,6 +81,7 @@ button:hover{
   background-color: rgb(170, 170, 170);
 }
 div>button{
+  margin-top: 3.1%;
   font-size: .8em;
   letter-spacing: .12em;
   text-transform: uppercase; 
@@ -95,69 +95,82 @@ main{
 main>div{
   width: 58.6vw;
   border-bottom: 1px solid rgb(233, 233, 233);
-  margin-bottom: 10.45vh;
-}
-main>div:last-child{
-  border: none;
-  margin-bottom: 6vh;
+  margin-bottom: 10.55vh;
 }
 main>div>img{
-  width: 100%;
-}
-article>div{
-  display: flex;
-  align-items: center;
+ width: 100%;
 }
 h4{
-  font-size: 1.744vw;
-  padding:4.4vh 0 1.5vh 0;
-  letter-spacing: -0.033em;
+  padding-top:4.2vh;
+  font-size: 1.67vw;
+  letter-spacing: -0.01em;
 }
-article>div>img{
+main>div:nth-child(even)>article>h4+p::before{
+  background-image: url(../img/author-image2.jpg);
+}
+main>div:nth-child(odd)>article>h4+p::before{
+  background-image: url(../img/author-image1.jpg);
+}
+h4+p::before{
+  content: "";
+  display: inline-block;
   width: 50px;
+  height: 50px;
   border-radius: 50%;
-}
-article>div>p{
-  font-family:'Lora', serif;
-  font-size: 1.15em;
-  padding-left: 0.5em;
-  padding-bottom: 0.3em;
-  letter-spacing: -0.005em;
-  color: #55555A;
-}
-article>div>p>span{
-  font-family:'Lora', serif;
-  padding-left: 1.1em;
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: 20px;
+  left: 0;
+  margin-right: 10px;
 }
 article>p{
-  padding-top:27px;
-  letter-spacing: 0.044em;
-  line-height: 1.95em;
-  color: #55555A;
+  font-family:'Lora', serif;
+  color: #55555A; 
+}
+article>p:nth-child(2){
+  font-size: 1.15em;
+  transform: translate(0,-5%);
+  letter-spacing: -0.01em;
+}
+article>p>span{
+  font-family:'Lora', serif; 
+  padding-left: 1.1em;
+}
+article>p:nth-child(3){
+  padding-top:37px;
+  font-size: 1.12em;
+  letter-spacing: 0.0125em;
+  line-height: 1.75em;
 }
 i{
   padding: 0 4px 0 19px;
   color: #55555A;
 }
 article>button{
-  border: 1px solid #55555A;
+  border: 1px solid #777;
   font-size: 1em;
   letter-spacing: .05em;
-  margin-bottom: 75px;
+  margin: 43px 0 75px;
   padding: 18px 34px;
+}
+main>div:last-child{
+  border: none;
+  margin-bottom: 6.3vh;
 }
 footer{
   display: flex;
   justify-content: space-around;
   color:#fff;
   background-color: black;
-  height: 45vh;
+  height: 425px;
 }
 footer>section{
  width: 28%;
 }
 footer>section:first-child{
-  margin-left: 15.8vw;
+  margin-left: 15.9vw;
 }
 h5{
   padding: 6vw 0 .8vw 0;
@@ -166,10 +179,10 @@ h5{
   font-weight: 900;
 }
 footer>section>p{
-  font-size: .9vw;
+  font-size: 1.08em;
   letter-spacing: 0.03em;
   line-height: 1.82em;
-  padding-bottom: 1.45vw;
+  padding-bottom: 1.5em;
   font-family:'Lora', serif;
   color:rgb(114, 110, 110) ;
 }
